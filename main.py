@@ -61,7 +61,6 @@ class QuizGame:
         print(f"\n🎮 이번 게임 점수: {score}/{len(self.questions)}")
         self.save_high_score(score) # 게임 종료 후 점수 저장 체크
 
-    # ... (add_quiz, list_quizzes, delete_quiz 함수는 이전과 동일) ...
     def add_quiz(self):
         print("\n➕ 새 문제 추가")
         q_text = input("문제 내용: ")
@@ -76,11 +75,15 @@ class QuizGame:
 
     def list_quizzes(self):
         print("\n📋 문제 목록")
+        if not self.questions:
+            print("등록된 문제가 없습니다.")
+            return
         for i, q in enumerate(self.questions):
             print(f"{i+1}. {q.question} (정답: {q.answer})")
 
     def delete_quiz(self):
         self.list_quizzes()
+        if not self.questions: return
         try:
             idx = int(input("\n🗑️ 삭제할 번호 (취소: 0): "))
             if 0 < idx <= len(self.questions):
@@ -100,13 +103,14 @@ def main():
         elif choice == '2': game.add_quiz()
         elif choice == '3': game.list_quizzes()
         elif choice == '4': game.delete_quiz()
-        elif choice == '5': break
+        elif choice == '5': 
+            print("프로그램을 종료합니다.")
+            break
         else: print("❌ 잘못된 입력")
 
 if __name__ == "__main__":
     try:
-        game = QuizGame()
-        game.run()
+        main() # game.run() 대신 main()을 호출합니다.
     except KeyboardInterrupt:
         print("\n[알림] 다음에 또 만나요! 👋")
     except EOFError:
