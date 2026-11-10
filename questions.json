@@ -1,0 +1,17 @@
+[
+    {
+        "question": "파이썬에서 화면에 내용을 출력하는 함수는 무엇일까요?",
+        "options": ["1. input()", "2. print()", "3. output()", "4. display()"],
+        "answer": 2
+    },
+    {
+        "question": "파이썬 리스트에 요소를 추가하는 메서드는?",
+        "options": ["1. add()", "2. push()", "3. append()", "4. insert_end()"],
+        "answer": 3
+    },
+    {
+        "question": "다음 중 파이썬의 자료형이 아닌 것은?",
+        "options": ["1. int", "2. str", "3. list", "4. double"],
+        "answer": 4
+    }
+]
