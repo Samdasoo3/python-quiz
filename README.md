@@ -1,2 +1,2 @@
 # python-quiz
-Python console quiz game projec
+Python console quiz game project
