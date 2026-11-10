@@ -104,4 +104,10 @@ def main():
         else: print("❌ 잘못된 입력")
 
 if __name__ == "__main__":
-    main()
+    try:
+        game = QuizGame()
+        game.run()
+    except KeyboardInterrupt:
+        print("\n[알림] 다음에 또 만나요! 👋")
+    except EOFError:
+        print("\n[알림] 다음에 또 만나요! 👋")
