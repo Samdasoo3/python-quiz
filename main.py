@@ -94,7 +94,7 @@ def main():
     game = QuizGame()
     while True:
         print(f"\n🏆 현재 최고 점수: {game.high_score}") # 상단에 최고 점수 표시
-        print("1. 퀴즈 풀기 2. 문제 추가 3. 목록 보기 4. 문제 삭제 5. 종료")
+        print("1. 🚀 퀴즈 시작하기 2. 문제 추가 3. 목록 보기 4. 문제 삭제 5. 종료")
         choice = input("선택: ")
         if choice == '1': game.play()
         elif choice == '2': game.add_quiz()
